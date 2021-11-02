@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Apricot Soundboard</title>
+        <script>
+            var player = null;
+            function playSound(btn) {
+                var soundSrc = btn.getAttribute("data-sound");
+                if (player != null) {
+                    player.pause();
+                }
+                player = new Audio(soundSrc);
+                player.play();
+            }
+
+            window.onload = function() {
+                Array.from(document.getElementsByClassName("apri-sound")).forEach(button => {
+                    button.setAttribute("onClick", "playSound(this)");
+                });
+            }
+        </script>      
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background: url('./avatar.webp') black;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            .apri-sound {
+                width: 125px;
+                height: 125px;
+                background: cyan;
+                display: inline-block;
+                margin: 5px 5px;
+                text-align: center;
+                vertical-align: middle;
+                font-weight: bold;
+                font-size: 12pt;
+                line-height: 85px;
+                padding: 10px;
+                border: 3px solid black;
+                cursor: pointer;
+            }
+            div.apri-sound > span
+            {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 25px;
+            }
+            #main {
+                width: 680px;
+                margin: 0 auto;
+                margin-top: 50px;
+            }
+        </style>      
+    </head>
+    <body>
+        <div id="main">
+            <div class="apri-sound" data-sound="sounds/8seconds_to_come.wav"><span>8 seconds to cum</span></div>
+            <div class="apri-sound" data-sound="sounds/pita.wav"><span>putain</span></div>
+            <div class="apri-sound" data-sound="sounds/tarzan_of_shit.wav"><span>Tarzan of shit</span></div>
+            <div class="apri-sound" data-sound="sounds/tarzan_of_shit2.wav"><span>Tarzan of shit 2</span></div>
+            <div class="apri-sound" data-sound="sounds/vasy_fuck_that.wav"><span>Vasy fuck that</span></div>
+            <div class="apri-sound" data-sound="sounds/swap_that_shit.wav"><span>Swap that shit</span></div>
+            <div class="apri-sound" data-sound="sounds/pita_man.wav"><span>putain man</span></div>
+            <div class="apri-sound" data-sound="sounds/pita_merde2.wav"><span>putain merde</span></div>
+            <div class="apri-sound" data-sound="sounds/pita_something.wav"><span>putain (???)</span></div>
+            <div class="apri-sound" data-sound="sounds/random_sound.wav"><span>(???)</span></div>
+            <div class="apri-sound" data-sound="sounds/retarded_cancer_man.wav"><span>retarded cancer</span></div>
+            <div class="apri-sound" data-sound="sounds/not_even_gibbed.wav"><span>not even gibbed</span></div>
+            <div class="apri-sound" data-sound="sounds/mouth_fart.wav"><span>fart</span></div>
+            <div class="apri-sound" data-sound="sounds/merde.wav"><span>merde</span></div>
+            <div class="apri-sound" data-sound="sounds/fucking_nerd.wav"><span>fucking nerd</span></div>
+            <div class="apri-sound" data-sound="sounds/fucking_nerds_really.wav"><span>fucking nerds really</span></div>
+            <div class="apri-sound" data-sound="sounds/fking_retard.wav"><span>fucking retard</span></div>
+            <div class="apri-sound" data-sound="sounds/cant_jump.wav"><span>can't jump</span></div>
+            <div class="apri-sound" data-sound="sounds/adler_and_Frost.wav"><span>el rattico</span></div>
+            
+        </div>
+    </body>
+</html>
